@@ -1,9 +1,8 @@
 <?php
 class Video
 {
-    public function convert()
+    public function convert($file)
     {
-        echo 'Convirtiendo ';
+        echo '- Convirtiendo ' . $file . '<br>';
     }
 }
-?>

@@ -1,6 +1,6 @@
 <?php
-interface ITransport // Un transporte siempre debe poder entregar algo
+// Un transporte siempre debe poder entregar algo
+interface ITransport
 {
     public function deliver();
 }
-?>

@@ -20,4 +20,3 @@ class Circulo implements IPrototype
         return new Circulo($this->radio);
     }
 }
-?>

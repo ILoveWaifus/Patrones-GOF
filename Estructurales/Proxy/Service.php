@@ -1,41 +1,21 @@
 <?php
+require_once 'ServiceInterface.php';
+
 class Service implements ServiceInterface
 {
 
     public function __construct()
     {
+        // This constructor is intentionally left empty.
     }
 
-    public function request()
+    public function sum($a, $b)
     {
-        echo 'Requesting ';
+        return $a + $b;
     }
 
-    public function response()
+    public function multiply($a, $b)
     {
-        echo 'Response';
+        return $a * $b;
     }
-
-    public function something()
-    {
-        echo 'Something';
-    }
-
-    public function other()
-    {
-        echo 'Other';
-    }
-
-    public function another()
-    {
-        echo 'Another';
-    }
-
-    public function last()
-    {
-        echo 'Last';
-    }
-
-    // Y muchas mas
 }
-?>

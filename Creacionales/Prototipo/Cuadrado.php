@@ -20,4 +20,3 @@ class Cuadrado implements IPrototype
         return new Cuadrado($this->lado);
     }
 }
-?>

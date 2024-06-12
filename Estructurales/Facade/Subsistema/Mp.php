@@ -1,9 +1,8 @@
 <?php
 class Mp
 {
-    public function cut()
+    public function cut($file)
     {
-        echo 'Cortando ';
+        echo '- Cortando ' . $file . '<br>';
     }
 }
-?>

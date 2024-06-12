@@ -1,5 +1,4 @@
 <?php
-
 require_once 'Component/BaseDecorator.php';
 
 class ImageNotificationDecorator extends BaseDecorator
@@ -8,7 +7,6 @@ class ImageNotificationDecorator extends BaseDecorator
     // El objetivo es que el decorador añada funcionalidad al wrappee
     public function execute()
     {
-        return 'Imagen' . $this->wrappee->execute();
+        return 'Imagen - ' . $this->wrappee->execute();
     }
 }
-?>

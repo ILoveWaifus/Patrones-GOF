@@ -6,4 +6,3 @@ class ShipCreator extends TransportCreator
         $this->transport = new Ship();
     }
 }
-?>

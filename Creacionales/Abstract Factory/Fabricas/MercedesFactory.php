@@ -1,5 +1,4 @@
 <?php
-
 require_once 'Fabricas/AbstractFactory.php';
 require_once 'Fabricas/Products/AbstractCar.php';
 require_once 'Fabricas/Products/AbstractShip.php';
@@ -18,4 +17,3 @@ class MercedesFactory extends AbstractFactory
         return new MercedesShip();
     }
 }
-?>

@@ -1,47 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Formulario de Acciones</title>
 </head>
 <body>
+    <form method="POST" action="index.php">
+        <button type="submit" name="action" value="action1">Contar Familiares</button>
+    </form>
 
-<form method="post" action="index.php">
-    <button type="submit" name="action" value="action1">Contar Familiares</button>
+    <?php
+    require_once "Component/Caja.php";
+    require_once "Component/Bolsa.php";
+    require_once "Component/Objeto.php";
 
-</form>
+    if ($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+        // Puedes utilizar Builder al crear árboles Composite complejos porque puedes
+        // programar sus pasos de construcción para que funcionen de forma recursiva.
 
-<?php
+        // Crear caja
+        $caja = new Caja();
 
-require_once "Component/Composite.php";
-require_once "Component/Leaf.php";
+        // Crear bolsas
+        $bolsa1 = new Bolsa();
+        $bolsa2 = new Bolsa();
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") 
-{
+        // Crear objetos
+        $objeto1 = new Objeto();
+        $objeto2 = new Objeto();
+        $objeto3 = new Objeto();
+        $objeto4 = new Objeto();
+        $objeto5 = new Objeto();
+        $objeto6 = new Objeto();
 
-    // Y por cosas como estas senores, es por lo que se usa el patron Builder
-    // Pero bueno, es un ejemplo
-    $familiar = new Leaf();
-    $familiar2 = new Leaf();
-    $familiar3 = new Leaf();
+        // Agregar objetos a las bolsas
+        $bolsa1->addObjeto($objeto1);
+        $bolsa1->addObjeto($objeto2);
+        $bolsa1->addObjeto($objeto3);
+        $bolsa2->addObjeto($objeto4);
 
-    $familia = new Composite();
-    $familia->addFamiliar($familiar);
-    $familia->addFamiliar($familiar2);
-    $familia->addFamiliar($familiar3);
+        // Agregar bolsas y objetos a la caja
+        $caja->addObjeto($bolsa1);
+        $caja->addObjeto($bolsa2);
+        $caja->addObjeto($objeto5);
+        $caja->addObjeto($objeto6);
 
-    $familiar4 = new Leaf();
-    $familiar5 = new Leaf();
-
-    $familia2 = new Composite();
-    $familia2->addFamiliar($familiar4);
-    $familia2->addFamiliar($familiar5);
-    $familia2->addFamiliar($familia); // Fijaros que trato a un Composite como si fuera un Leaf
-
-
-    echo "Total de familiares: " . $familia2->contarFamiliares();
-}
-?>
-
+        echo "Total de objetos: " . $caja->contarObjetos();
+    }
+    ?>
 </body>
 </html>

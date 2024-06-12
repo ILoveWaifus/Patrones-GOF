@@ -1,5 +1,4 @@
 <?php
-
 require_once 'Component/IComponent.php';
 class Notificacion implements IComponent
 {
@@ -8,4 +7,3 @@ class Notificacion implements IComponent
         return 'Notificacion';
     }
 }
-?>

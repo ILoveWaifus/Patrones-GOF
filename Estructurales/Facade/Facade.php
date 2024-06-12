@@ -1,5 +1,4 @@
 <?php
-
 require_once 'Subsistema/Compression.php';
 require_once 'Subsistema/Mp.php';
 require_once 'Subsistema/AudioMixer.php';
@@ -22,8 +21,7 @@ class Facade
     public function convert($file)
     {
         $this->compression->compress($file);
-        $this->mp->cut();
-        $this->audioMixer->fix();
+        $this->mp->cut($file);
+        $this->audioMixer->fix($file);
     }
 }
-?>

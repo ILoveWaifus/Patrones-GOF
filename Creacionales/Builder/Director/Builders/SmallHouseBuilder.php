@@ -26,4 +26,3 @@ class SmallHouseBuilder implements IBuilder
         return $this->smallHouse;
     }
 }
-?>

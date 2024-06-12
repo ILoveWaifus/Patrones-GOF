@@ -1,9 +1,8 @@
 <?php
 class AudioMixer
 {
-    public function fix()
+    public function fix($file)
     {
-        echo 'AudioMixer';
+        echo '- Mixeando' . $file . '<br>';
     }
 }
-?>

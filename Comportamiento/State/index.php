@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Formulario de Acciones</title>
 </head>
 <body>
 
-<form method="post" action="index.php">
+<form method="POST" action="index.php">
     <button type="submit" name="action" value="action1">Moverte</button>
     <button type="submit" name="action" value="action2">Parase</button>
 </form>

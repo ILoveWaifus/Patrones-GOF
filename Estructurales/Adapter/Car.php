@@ -1,9 +1,8 @@
 <?php
-class Coche
+class Car
 {
     public function deliver()
     {
-        return "Car";
+        return "Coche";
     }
 }
-?>

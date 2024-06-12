@@ -1,8 +1,7 @@
 <?php
 interface ServiceInterface
 {
-    public function request();
+    public function sum($a, $b);
 
-    public function response();
+    public function multiply($a, $b);
 }
-?>

@@ -1,31 +1,9 @@
 <?php
 class Service
 {
+    // Imaginemos que este metodo devuelve el texto en un formato que no nos vale en el contexto de la aplicacion
     public function something()
     {
-        // Imaginemos que este metodo mueve un avion de un punto A a un punto B, la interfaz de este metodo es something
-        return "Plane";
+        return "A.v.i.ó.n.";
     }
-
-    public function somethingElse()
-    {
-        // Do something else
-    }
-
-    public function somethingMore()
-    {
-        // Do something more
-    }
-
-    public function somethingDifferent()
-    {
-        // Do something different
-    }
-
-    public function somethingCompletelyDifferent()
-    {
-        // Do something completely different
-    }
-
 }
-?>

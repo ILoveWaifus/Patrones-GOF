@@ -1,5 +1,4 @@
 <?php
-
 require_once "IAdapter.php";
 
 class Adapter implements IAdapter
@@ -11,10 +10,11 @@ class Adapter implements IAdapter
         $this->service = $service;
     }
 
-    // OJO! si el metodo something devuelve un formato diferente al de deliver, se debe adaptar tambien
+    // El adaptador se encarga de adaptar el metodo something de la clase Service para que se comporte como deliver de la clase Coche
+    // En este caso modificando el formato del texto que devuelve par que se parezca al de la clase Coche
     public function deliver()
     {
-        return $this->service->something();
+        $data = $this->service->something();
+        return str_replace(".", "", $data);
     }
 }
-?>

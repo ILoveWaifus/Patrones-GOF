@@ -1,5 +1,4 @@
 <?php
-
 require_once 'Fabricas/AbstractFactory.php';
 require_once 'Fabricas/Products/AbstractCar.php';
 require_once 'Fabricas/Products/AbstractShip.php';
@@ -17,4 +16,3 @@ class FerrariFactory extends AbstractFactory
         return new FerrariShip();
     }
 }
-?>

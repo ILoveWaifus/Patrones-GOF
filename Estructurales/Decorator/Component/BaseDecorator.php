@@ -17,4 +17,3 @@ class BaseDecorator implements IComponent
         return $this->wrappee->execute();
     }
 }
-?>

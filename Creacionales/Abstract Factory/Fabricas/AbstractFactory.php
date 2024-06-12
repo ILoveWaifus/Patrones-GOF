@@ -8,4 +8,3 @@ abstract class AbstractFactory
 
     abstract public function createShip() : AbstractShip;
 }
-?>

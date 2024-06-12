@@ -5,7 +5,6 @@ class TextNotificationDecorator extends BaseDecorator
 {
     public function execute()
     {
-        return 'Texto' . $this->wrappee->execute();
+        return 'Texto - ' . $this->wrappee->execute();
     }
 }
-?>

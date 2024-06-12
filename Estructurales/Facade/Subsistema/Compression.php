@@ -3,7 +3,6 @@ class Compression
 {
     public function compress($file)
     {
-        echo 'Comprimiendo ';
+        echo '- Comprimiendo ' . $file . '<br>';
     }
 }
-?>

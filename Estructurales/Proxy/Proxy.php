@@ -1,4 +1,6 @@
 <?php
+require_once 'ServiceInterface.php';
+require_once 'Service.php';
 
 // Debe implementar la misma interfaz que el servicio real, se intenta camuflar
 // Podemos hacer muchas cosas antes o después de la petición al servicio real
@@ -14,15 +16,16 @@ class Proxy implements ServiceInterface
     }
 
     // El proxy permite realizar acciones adicionales antes o después de la petición al servicio real
-    public function request()
+    public function sum($a, $b)
     {
         $this->nrequest++;
-        $this->service->request();
+        return $this->service->sum($a, $b);
     }
 
-    public function response()
+    public function multiply($a, $b)
     {
-        $this->service->response();
+        $this->nrequest++;
+        return $this->service->multiply($a, $b);
     }
 
     public function printRequest()
@@ -30,4 +33,3 @@ class Proxy implements ServiceInterface
         echo 'Request number: ' . $this->nrequest;
     }
 }
-?>

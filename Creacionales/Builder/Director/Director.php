@@ -1,5 +1,4 @@
 <?php
-
 require_once 'Director/Builders/IBuilder.php';
 
 class Director
@@ -24,5 +23,3 @@ class Director
         return $this->builder->getResult();
     }
 }
-
-?>

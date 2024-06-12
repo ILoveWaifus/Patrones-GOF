@@ -1,11 +1,10 @@
 <?php
 
 // En nuestro caso, un Leaf es un componente el cual no tiene hijos
-class Leaf implements IComponent
+class Objeto implements IComponent
 {
-    public function contarFamiliares()
+    public function contarObjetos()
     {
         return 1;
     }
 }
-?>

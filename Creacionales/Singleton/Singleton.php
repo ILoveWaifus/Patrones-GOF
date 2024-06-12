@@ -12,7 +12,7 @@ class Singleton
     // Metodo para obtener la instancia de la clase, se creara una unica vez si la instancia es null
     public static function getInstance()
     {
-        if (self::$instance == null) 
+        if (self::$instance == null)
         {
             self::$instance = new Singleton();
         }
@@ -20,4 +20,3 @@ class Singleton
         return self::$instance;
     }
 }
-?> 

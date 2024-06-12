@@ -6,4 +6,3 @@ class CarCreator extends TransportCreator
         $this->transport = new Car();
     }
 }
-?>

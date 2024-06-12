@@ -1,6 +1,6 @@
 <?php
 // OJO! es un ejemplo, lo normal es que haya muchos mas atributos y metodos, diferencio casa grande de casa pequeña por el atributo swimmingPool
-class BigHouse 
+class BigHouse
 {
     private $walls;
     private $swimmingPool;
@@ -17,10 +17,8 @@ class BigHouse
 
     public function printHouse()
     {
-        echo "Big House\n";
-        echo "Walls: $this->walls\n";
-        echo "Swimming Pool: $this->swimmingPool\n";
+        echo "Casa grande:<br>";
+        echo "- Paredes: $this->walls<br>";
+        echo "- Piscina: $this->swimmingPool<br>";
     }
 }
-
-?>

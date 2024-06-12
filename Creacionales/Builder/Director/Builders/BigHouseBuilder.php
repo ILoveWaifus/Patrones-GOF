@@ -1,5 +1,4 @@
 <?php
-
 require_once 'Director/Builders/IBuilder.php';
 require_once 'Director/Builders/Products/BigHouse.php';
 
@@ -27,4 +26,3 @@ class BigHouseBuilder implements IBuilder
         return $this->bigHouse;
     }
 }
-?>

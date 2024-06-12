@@ -3,4 +3,3 @@ interface IComponent
 {
     public function execute();
 }
-?>
