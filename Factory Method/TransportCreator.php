@@ -4,7 +4,8 @@ class TransportCreator // Esta clase puede ser o no abstracta, en este caso he d
 {
     protected ITransport $transport;
 
-    public function deliver($direccion)
+    // OJO! la clase creadora, esta y sus hijas no tienen como funcion principal crear, sino entregar, logica de negocio. Si su objetivo principal fuera crear, seria abstract factory, aunque son bastante parecidos
+    public function deliver($direccion) 
     {
         // Devolveremos la direccion y el tipo de transporte
         return $direccion . " with " . $this->transport->deliver();

@@ -32,6 +32,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $creator = null;
 
+    // Este switch creo que es necesario, ya que si no se selecciona ninguna acción, no se instanciará ninguna clase
+    // Sin embargo esto no sigue el patron abierto/cerrado por lo que alomejor hay otra forma
     switch ($action) {
         case 'action1':
             $creator = new TransportCreator();
@@ -46,8 +48,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "Acción no válida.";
     }
 
+    // La gracia es que veremos la direccion y el tipo de transporte en base a la clase que se haya instanciado
     $creator->createTransport();
-    echo $creator->deliver($address); // La gracia es que veremos la direccion y el tipo de transporte en base a la clase que se haya instanciado
+    echo $creator->deliver($address); 
 }
 ?>
 
