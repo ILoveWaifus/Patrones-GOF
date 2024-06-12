@@ -19,12 +19,12 @@
 
 <?php
 
-require_once 'ITransport.php';
-require_once 'TransportCreator.php';
-require_once 'Car.php';
-require_once 'CarCreator.php';
-require_once 'Ship.php';
-require_once 'ShipCreator.php';
+require_once 'Products/ITransport.php';
+require_once 'Creator/TransportCreator.php';
+require_once 'Products/Car.php';
+require_once 'Creator/CarCreator.php';
+require_once 'Products/Ship.php';
+require_once 'Creator/ShipCreator.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $address = $_POST['address'];
