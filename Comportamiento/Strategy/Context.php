@@ -1,5 +1,4 @@
 <?php
-
 require_once 'IStrategy.php';
 
 // Mantenemos una referencia a la estrategia que se va a utilizar
@@ -18,4 +17,3 @@ class Context
         $this->strategy->execute($datos);
     }
 }
-?>

@@ -5,17 +5,17 @@ class PlayingState implements IState
 {
     public function start()
     {
-        echo "PlayingState: Iniciando\n";
+        echo "<strong>En movimiento:</strong> Iniciando<br>";
     }
 
     public function update()
     {
-        echo "PlayingState: Actualizando\n";
+        echo "<strong>En movimiento:</strong> Actualizando<br>";
     }
 
     public function end()
     {
-        echo "PlayingState: Finalizando\n";
+        echo "<strong>En movimiento:</strong> Finalizando<br>";
     }
 }
-?>
+

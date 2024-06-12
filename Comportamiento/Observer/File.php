@@ -13,9 +13,8 @@ class File
     // Estos tienen funciones que se ejecutan cuando se notifica
     public function save()
     {
-        echo "File: Guardando archivo en disco\n";
-        echo "File: Notificando a los suscriptores\n";
+        // echo "File: Guardando archivo en disco<br>";
+        // echo "File: Notificando a los suscriptores<br>";
         $this->publisher->notify($this->filename);
     }
 }
-?>

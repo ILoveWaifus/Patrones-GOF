@@ -5,28 +5,30 @@
     <title>Formulario de Acciones</title>
 </head>
 <body>
+    <form method="POST" action="index.php">
+        <button type="submit" name="action" value="action1">Save File</button>
+    </form>
 
-<form method="POST" action="index.php">
-    <button type="submit" name="action" value="action1">Save File</button>
-</form>
+    <?php
+    require_once 'EmailAlertsListener.php';
+    require_once 'Publisher.php';
+    require_once 'File.php';
 
-<?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+        // Crear listener
+        $mailListener = new EmailAlertsListener();
 
-require_once 'EmailAlertsListener.php';
-require_once 'Publisher.php';
-require_once 'File.php';
+        // Crear publisher y suscribir al listener
+        $publisher = new Publisher();
+        $publisher->subscribe($mailListener);
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Crear archivo
+        $file = new File("file.txt", $publisher);
 
-    $maillistener = new EmailAlertsListener();
-    $publisher = new Publisher();
-    $publisher->subscribe($maillistener);
-    $file = new File("file.txt", $publisher);
-
-    // Cuando se guarda el archivo, se notifica a los suscriptores
-    $file->save();
-}
-?>
-
+        // Cuando se guarda el archivo, se notifica a los suscriptores
+        $file->save();
+    }
+    ?>
 </body>
 </html>

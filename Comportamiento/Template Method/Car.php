@@ -1,17 +1,16 @@
 <?php
-
 require_once 'AbstractClass.php';
 
+// Sobreescribimos los métodos que sean necesarios
 class Car extends AbstractClass
 {
     protected function primitiveOperation1()
     {
-        echo "Car: Encendiendo el motor\n";
+        echo "Coche: Encendiendo el motor<br>";
     }
 
     protected function primitiveOperation2()
     {
-        echo "Car: Conduciendo\n";
+        echo "Coche: Conduciendo<br>";
     }
 }
-?>

@@ -18,4 +18,3 @@ class PasteCommand implements ICommand
         $this->textEditor->setText($this->textEditor->getText() . $this->text);
     }
 }
-?>

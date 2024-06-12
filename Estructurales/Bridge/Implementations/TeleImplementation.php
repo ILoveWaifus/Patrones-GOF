@@ -11,4 +11,3 @@ class TeleImplementation implements IImplementation
         echo "Tele apagada";
     }
 }
-?>

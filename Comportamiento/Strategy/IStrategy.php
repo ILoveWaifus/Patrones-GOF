@@ -3,4 +3,3 @@ interface IStrategy
 {
     public function execute($datos);
 }
-?>

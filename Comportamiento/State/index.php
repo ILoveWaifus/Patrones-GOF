@@ -5,39 +5,39 @@
     <title>Formulario de Acciones</title>
 </head>
 <body>
+    <form method="POST" action="index.php">
+        <button type="submit" name="action" value="action1">Moverte</button>
+        <button type="submit" name="action" value="action2">Parase</button>
+    </form>
 
-<form method="POST" action="index.php">
-    <button type="submit" name="action" value="action1">Moverte</button>
-    <button type="submit" name="action" value="action2">Parase</button>
-</form>
+    <?php
+    require_once "PlayingState.php";
+    require_once "IdleState.php";
 
-<?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+        $action = $_POST['action'];
 
-require_once "PlayingState.php";
-require_once "IdleState.php";
+        $state = null;
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $action = $_POST['action'];
+        switch ($action) {
+            case 'action1':
+                $state = new PlayingState();
+                break;
+            case 'action2':
+                $state = new IdleState();
+                break;
+            default:
+                echo "Acción no válida.";
+        }
 
-    $state = null;
+        $state->start();
 
-    switch ($action) {
-        case 'action1':
-            $state = new PlayingState();
-            break;
-        case 'action2':
-            $state = new IdleState();
-            break;
-        default:
-            echo "Acción no válida.";
+        // Este método se ejecutaria en un bucle hasta un cambio de estado
+        $state->update();
+        
+        $state->end();
     }
-
-    $state->start();
-    // Este método se ejecutaria en un bucle hasta un cambio de estado
-    $state->update();
-    $state->end();
-}
-?>
-
+    ?>
 </body>
 </html>

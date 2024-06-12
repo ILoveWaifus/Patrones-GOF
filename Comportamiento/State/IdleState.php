@@ -1,21 +1,19 @@
 <?php
-
 require_once "IState.php";
 class IdleState implements IState
 {
     public function start()
     {
-        echo "IdleState: Iniciando\n";
+        echo "<strong>Parado:</strong> Iniciando<br>";
     }
 
     public function update()
     {
-        echo "IdleState: Actualizando\n";
+        echo "<strong>Parado:</strong> Actualizando<br>";
     }
 
     public function end()
     {
-        echo "IdleState: Finalizando\n";
+        echo "<strong>Parado:</strong> Finalizando<br>";
     }
 }
-?>

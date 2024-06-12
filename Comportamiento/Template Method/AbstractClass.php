@@ -12,4 +12,3 @@ abstract class AbstractClass
     abstract protected function primitiveOperation1();
     abstract protected function primitiveOperation2();
 }
-?>

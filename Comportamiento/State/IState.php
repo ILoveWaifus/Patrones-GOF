@@ -5,4 +5,3 @@ interface IState
     public function update();
     public function end();
 }
-?>

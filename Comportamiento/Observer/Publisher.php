@@ -8,15 +8,16 @@ class Publisher
     }
     public function unsubscribe($listener)
     {
-        $this->listeners = array_filter($this->listeners, function($l) use ($listener) {
+        $this->listeners = array_filter($this->listeners, function($l) use ($listener)
+        {
             return $l !== $listener;
         });
     }
     public function notify($filename)
     {
-        foreach ($this->listeners as $listener) {
+        foreach ($this->listeners as $listener)
+        {
             $listener->update($filename);
         }
     }
 }
-?>

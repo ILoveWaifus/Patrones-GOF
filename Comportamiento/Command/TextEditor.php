@@ -18,4 +18,3 @@ class TextEditor
         $this->text = $text;
     }
 }
-?>

@@ -1,6 +1,5 @@
 <?php
-interface ICommand 
+interface ICommand
 {
     public function execute();
 }
-?>

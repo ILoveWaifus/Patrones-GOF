@@ -9,5 +9,3 @@ class EmailAlertsListener implements IEventListeners
         echo "EmailAlertsListener: Enviando email de alerta para el archivo: $filename\n";
     }
 }
-
-?>

@@ -1,5 +1,4 @@
 <?php
-
 require_once "Implementations/IImplementation.php";
 
 // Se usa para separar la abstraccion(que logica seguir) de la implementacion (como se hace)
@@ -25,4 +24,3 @@ class Abstraction
         return $this->implementation->apagar();
     }
 }
-?>

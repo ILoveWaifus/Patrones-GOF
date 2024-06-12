@@ -5,4 +5,3 @@ interface IImplementation
 
     public function apagar();
 }
-?>
